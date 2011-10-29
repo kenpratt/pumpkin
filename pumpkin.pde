@@ -1,9 +1,9 @@
 boolean DEBUG = false;
 
 // LEDs are connected pins 9-11
-int redPin = 9;
-int greenPin = 10;
-int bluePin = 11;
+int redPin = 11;
+int greenPin = 9;
+int bluePin = 10;
 
 // current colour, and destination colour for fading
 int colour[3];
@@ -81,6 +81,7 @@ void draw(int *colour) {
     Serial.println(colour[2]);
   }
   analogWrite(redPin, constrain(colour[0], 0, 255));
-  analogWrite(greenPin, constrain((int) (0.5 * colour[1]), 0, 255));
-  analogWrite(bluePin, constrain((int) (0.75 * colour[2]), 0, 255));
+  analogWrite(greenPin, constrain(colour[1], 0, 255));
+  analogWrite(bluePin, constrain(colour[2], 0, 255));
 }
+
