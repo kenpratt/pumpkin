@@ -1,4 +1,4 @@
-boolean DEBUG = true;
+boolean DEBUG = false;
 
 // LEDs are connected pins 9-11
 int redPin = 11;
@@ -13,7 +13,7 @@ int currcolor;
 
 void setup() {
   currcolor = 0;
-  setColor(color, 255, 0, 0);
+  setColor(color, 100, 0, 0);
   setColor(destcolor, 255, 0, 0);
   
   if (DEBUG) {
@@ -36,12 +36,6 @@ void fadeTo(int *target, int maxDiffPerStep, int t) {
   diffPerStep[1] = maxDiffPerStep * diffG / diffMax;
   diffPerStep[2] = maxDiffPerStep * diffB / diffMax;
   
-  Serial.println("diffPerStep");
-  Serial.println(diffPerStep[0]);
-  Serial.println(diffPerStep[1]);
-  Serial.println(diffPerStep[2]);
-  Serial.println();
-  
   while(!sameColor(target, color)) {
     for (int i=0; i<3; i++) {
       int diff = target[i] - color[i];
@@ -55,7 +49,46 @@ void fadeTo(int *target, int maxDiffPerStep, int t) {
   } 
 }
 
+void pulse(int *target, int m, int t) {
+  int orig[3];
+  setColor(orig, color[0], color[1], color[2]);
+  fadeTo(target, m, t);
+  fadeTo(orig, m, t);
+}
+
 void loop() {
+  for (int i=0; i<10; i++) {
+    setColor(destcolor, 80, 0, 0);
+    fadeTo(destcolor, 10, 8);
+    setColor(destcolor, 255, 0, 0);
+    fadeTo(destcolor, 10, 8);
+    delay(20);
+  }
+  
+  for (int i=0; i<10; i++) {
+    setColor(destcolor, 0, 255, 0);
+    fadeTo(destcolor, 10, 5);
+    setColor(destcolor, 0, 0, 255);
+    fadeTo(destcolor, 10, 5);
+    setColor(destcolor, 255, 0, 0);
+    fadeTo(destcolor, 10, 5);
+  }
+  
+  for (int i=0; i<26 ; i++) {
+    setColor(destcolor, 0, 0, 0);
+    draw(destcolor);
+    delay(100);
+    setColor(destcolor, 240, 255, 255);
+    draw(destcolor);
+    delay(50);
+  }
+}
+
+void loop2() {
+  pulse(destcolor, 10, 10);
+}
+
+void loop3() {
   currcolor++;
 
   switch(currcolor) {
@@ -82,7 +115,7 @@ void loop() {
       setColor(destcolor, 255, 0, 0);
   }
 
-  fadeTo(destcolor, 5, 5);
+  fadeTo(destcolor, 10, 5);
 }
 
 void setColor(int * c, int r, int g, int b) {
