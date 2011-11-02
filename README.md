@@ -3,6 +3,10 @@ Pumpkin
 
 A carved pumpkin with a high-powered LED that I made for Halloween 2011.
 
+![The pumpkin](https://github.com/kenpratt/pumpkin/blob/master/pumpkin.jpg?raw=true)
+
+<iframe width="420" height="315" src="http://www.youtube.com/embed/TVvJAJWg51A" frameborder="0" allowfullscreen></iframe>
+
 Building
 --------
 
@@ -21,7 +25,7 @@ I built out the project in this order:
 Diagram
 -------
 
-![diagram](circuit_diagram.jpg)
+![The circuit diagram](https://github.com/kenpratt/pumpkin/blob/master/circuit_diagram.jpg?raw=true)
 
 Parts
 -----
