@@ -15,7 +15,7 @@ I built out the project in this order:
 2. Adapted the circuit to use the Arduino
 3. Wrote a bit of code to test out PWM
 4. Soldered the three drivers
-5. Hooked everything up to the Arduino & tested
+5. Hooked everything up to the Arduino & tested (put the three drivers in parallel)
 6. Coded up the light show
 
 Diagram
