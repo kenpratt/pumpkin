@@ -5,7 +5,7 @@ A carved pumpkin with a high-powered LED that I made for Halloween 2011.
 
 ![The pumpkin](https://github.com/kenpratt/pumpkin/blob/master/pumpkin.jpg?raw=true)
 
-<iframe width="420" height="315" src="http://www.youtube.com/embed/TVvJAJWg51A" frameborder="0" allowfullscreen></iframe>
+[Video of pumpkin in action](http://www.youtube.com/watch?feature=player_embedded&v=TVvJAJWg51A)
 
 Building
 --------
@@ -37,3 +37,8 @@ Parts
 * 3x BC 547 (Q1)
 * 3x IRFZ44N (Q2)
 * 1x 5V, 2A power adapter
+
+Guts
+----
+
+![The guts of the pumpkin](https://github.com/kenpratt/pumpkin/blob/master/guts.jpg?raw=true)
