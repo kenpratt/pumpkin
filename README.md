@@ -27,6 +27,8 @@ Diagram
 
 ![The circuit diagram](https://github.com/kenpratt/pumpkin/blob/master/circuit_diagram.jpg?raw=true)
 
+(Credit: Dan Goldwater, [High Power LED Driver Circuits](http://www.instructables.com/id/Circuits-for-using-High-Power-LED-s/))
+
 Parts
 -----
 
